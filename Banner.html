@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Banner - Guardians of the Galaxy Vol. 2</title>
+  <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    /* Banner container using CSS Grid for two columns */
+    .banner {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 20px;
+      background-color: #222;
+      color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 900px;
+      margin: 20px auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    /* Style the poster image */
+    .banner img {
+      width: 250px;
+      height: auto;
+      border-radius: 4px;
+      object-fit: cover;
+    }
+    /* Grid layout for the info section */
+    .info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 10px;
+    }
+    /* Title spans full width */
+    .info h1 {
+      grid-column: 1 / -1;
+      margin: 0 0 10px;
+      font-size: 28px;
+    }
+    /* Plot also spans full width */
+    .info .plot {
+      grid-column: 1 / -1;
+      line-height: 1.5;
+    }
+    /* Ratings section arranged in columns */
+    .ratings {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    .ratings span {
+      background: #333;
+      padding: 5px;
+      border-radius: 4px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="movie-banner" class="banner">
+    <!-- Poster will be in the first grid cell, details in the second -->
+  </div>
+
+  <script>
+    // Provided JSON data for "Guardians of the Galaxy Vol. 2"
+    const movieData = {
+      "Title": "Guardians of the Galaxy Vol. 2",
+      "Year": "2017",
+      "Rated": "PG-13",
+      "Released": "05 May 2017",
+      "Runtime": "136 min",
+      "Genre": "Action, Adventure, Comedy",
+      "Director": "James Gunn",
+      "Writer": "James Gunn, Dan Abnett, Andy Lanning",
+      "Actors": "Chris Pratt, Zoe Saldana, Dave Bautista",
+      "Plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's encounter with his father, the ambitious celestial being Ego.",
+      "Language": "English",
+      "Country": "United States",
+      "Awards": "Nominated for 1 Oscar. 15 wins & 60 nominations total",
+      "Poster": "https://m.media-amazon.com/images/M/MV5BNWE5MGI3MDctMmU5Ni00YzI2LWEzMTQtZGIyZDA5MzQzNDBhXkEyXkFqcGc@._V1_SX300.jpg",
+      "Ratings": [
+        {"Source": "Internet Movie Database", "Value": "7.6/10"},
+        {"Source": "Rotten Tomatoes", "Value": "85%"},
+        {"Source": "Metacritic", "Value": "67/100"}
+      ],
+      "Metascore": "67",
+      "imdbRating": "7.6",
+      "imdbVotes": "784,257",
+      "imdbID": "tt3896198",
+      "Type": "movie",
+      "DVD": "N/A",
+      "BoxOffice": "$389,813,101",
+      "Production": "N/A",
+      "Website": "N/A",
+      "Response": "True"
+    };
+
+    // Select the banner container
+    const bannerDiv = document.getElementById('movie-banner');
+
+    // Create the HTML content for the banner using grid layout for details
+    bannerDiv.innerHTML = `
+      <img src="${movieData.Poster}" alt="${movieData.Title} Poster">
+      <div class="info">
+        <h1>${movieData.Title} (${movieData.Year})</h1>
+        <p class="plot">${movieData.Plot}</p>
+        <p><strong>Director:</strong> ${movieData.Director}</p>
+        <p><strong>Actors:</strong> ${movieData.Actors}</p>
+        <div class="ratings">
+          ${movieData.Ratings.map(rating => `<span><strong>${rating.Source}:</strong> ${rating.Value}</span>`).join('')}
+        </div>
+      </div>
+    `;
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Tailwind Responsive Grid Layout</title>
+   <!-- Tailwind CSS CDN -->
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-screen bg-[#041E42]">
+   <!-- Navbar -->
+   <header class="bg-gray-800 p-4 fixed top-0 left-0 w-full z-50">
+      <nav class="flex flex-wrap items-center justify-between max-w-6xl mx-auto">
+         <!-- Logo -->
+         <div class="flex text-white justify-center md:justify-start">
+            <img src="https://via.placeholder.com/40" alt="Logo" class="w-10 h-10">
+         </div>
+         <!-- Navigation Links -->
+         <div class="hidden md:flex space-x-6 text-white text-lg">
+            <a href="#" class="hover:text-gray-300">Movie</a>
+            <a href="#" class="hover:text-gray-300">TV Shows</a>
+            <a href="#" class="hover:text-gray-300">Suggest Me &rarr;</a>
+         </div>
+         <!-- Mobile Menu Icon -->
+         <button class="md:hidden text-white">☰</button>
+      </nav>
+   </header>
+   
+
+   <!-- Main Content -->
+   <main class="max-w-7xl mx-auto p-6">
+      <!-- Hero Section -->
+      <section class="text-center md:text-left space-y-6">
+         <h2 class="text-4xl md:text-5xl font-bold text-white">MaileHereko</h2>
+         <p class="text-gray-400">List of movies and TV shows you’ve watched.<br>List of movies and TV shows you’ve watched.</p>
+         <!-- Search Bar & Filter Buttons -->
+         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+               <form class="relative max-w-md">
+                  <input type="search" id="search" placeholder="Search..."
+                     class="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                  <svg class="absolute left-3 top-3 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                     fill="none" viewBox="0 0 20 20">
+                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                  </svg>
+               </form>
+            </div>
+            <br>
+            <div class="flex space-x-2">
+               <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">All</button>
+               <button class="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">Movies</button>
+               <button class="px-6 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700">TV Shows</button>
+            </div>
+         </div>
+      </section><br>
+
+      <!-- Card Grid Section -->
+      <h1 class="px-2 py-4 text-2xl md:text-3xl font-bold text-white">All (00)</h1>
+
+      <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+         <!-- Cards -->
+         <div class="bg-black text-white border border-gray-200 rounded-lg shadow-md overflow-hidden text-left p-4">
+            <h3 class="text-lg font-semibold">⭐ 8.3</h3>
+            <img class="w-full h-80 object-cover" src="./assets/kgf.jpg" alt="Movie Image">
+            <div class="p-3">
+               <h1 class="text-base font-semibold">KGF</h1>
+            </div>
+         </div>
+         <div class="bg-black text-white border border-gray-200 rounded-lg shadow-md overflow-hidden text-left p-4">
+            <h3 class="text-lg font-semibold">⭐ 8.3</h3>
+            <img class="w-full h-80 object-cover" src="./assets/pushpa-2.jpg" alt="pushpa-2">
+            <div class="p-3">
+               <h1 class="text-base font-semibold">Pushpa -2</h1>
+            </div>
+         </div>
+         <div class="bg-black text-white border-gray-200 rounded-lg shadow-md overflow-hidden text-left p-4">
+            <h3 class="text-lg font-semibold">⭐ 8.3</h3>
+            <img class="w-full h-80 object-cover" src="./assets/Hera-pheri.jpg" alt="Hera-pheri">
+            <div class="p-3">
+               <h1 class="text-base font-semibold">Hera - Pheri</h1>
+            </div>
+         </div>
+         <div class="bg-black text-white border-gray-200 rounded-lg shadow-md overflow-hidden text-left p-4">
+            <h3 class="text-lg font-semibold">⭐ 8.3</h3>
+            <img class="w-full h-80 object-cover" src="./assets/kgf.jpg" alt="KGF">
+            <div class="p-3">
+               <h1 class="text-base font-semibold">KGF</h1>
+            </div>
+         </div>
+         <div class="bg-black text-white border border-gray-200 rounded-lg shadow-md overflow-hidden text-left p-4">
+            <h3 class="text-lg font-semibold">⭐ 8.3</h3>
+            <img class="w-full h-80 object-cover" src="./assets/kgf.jpg" alt="Movie Image">
+            <div class="p-3">
+               <h1 class="text-base font-semibold">KGF</h1>
+            </div>
+         </div>
+         <div class="bg-black text-white border border-gray-200 rounded-lg shadow-md overflow-hidden text-left p-4">
+            <h3 class="text-lg font-semibold">⭐ 8.3</h3>
+            <img class="w-full h-80 object-cover" src="./assets/pushpa-2.jpg" alt="pushpa-2">
+            <div class="p-3">
+               <h1 class="text-base font-semibold">Pushpa -2</h1>
+            </div>
+         </div>
+         <div class="bg-black text-white border-gray-200 rounded-lg shadow-md overflow-hidden text-left p-4">
+            <h3 class="text-lg font-semibold">⭐ 8.3</h3>
+            <img class="w-full h-80 object-cover" src="./assets/Hera-pheri.jpg" alt="Hera-pheri">
+            <div class="p-3">
+               <h1 class="text-base font-semibold">Hera - Pheri</h1>
+            </div>
+         </div>
+         <div class="bg-black text-white border-gray-200 rounded-lg shadow-md overflow-hidden text-left p-4">
+            <h3 class="text-lg font-semibold">⭐ 8.3</h3>
+            <img class="w-full h-80 object-cover" src="./assets/kgf.jpg" alt="KGF">
+            <div class="p-3">
+               <h1 class="text-base font-semibold">KGF</h1>
+            </div>
+      </section>
+      <br><br>
+      <hr />
+      <br>
+      <section class="p-4">
+         <div class="max-w-4xl mx-auto">
+            <div class="overflow-hidden rounded-lg shadow-lg">
+               <img src="./assets/kgf-2.jpg" alt="KGF-2" class="w-full h-64 md:h-96 lg:h-[500px]  object-cover" />
+            </div>
+         </div><br><br>
+
+         <div>
+            <div class="container mx-auto">
+               <!-- Grid container with 2 columns -->
+               <div class="grid grid-cols-2 gap-4">
+                  <!-- First column -->
+                  <div class="p-2 rounded text-white text-center">
+                     <div class=" rounded-lg shadow-md overflow-hidden">
+                        <img class="w-3/4 h-auto object-cover rounded-lg mx-auto" src="./assets/avengers.jpg" alt="Avengers">
+                     </div>
+                  </div>
+                  
+                  
+                  <!-- Second column -->
+                  <div class=" p-6 rounded text-white text-center">
+                     <div class=" p-6 rounded-lg text-white max-w-md w-full shadow-lg text-left">
+                        <h1 class="text-2xl font-bold">Part of the journey is the end.</h1>
+                        <p class="mt-4 text-gray-300 text-sm">
+                            After the devastating events of Avengers: Infinity War, the universe is in ruins due to the
+                            efforts of the Mad Titan, Thanos. With the help of remaining allies, the Avengers must assemble
+                            once more to undo Thanos' actions and restore order to the universe once and for all, no matter
+                            what consequences may be in store.
+                        </p>
+                        <h3 class="mt-4 text-lg font-semibold">⭐ 8.3</h3>
+                        <div class="mt-4">
+                            <p class="text-gray-400">Type</p>
+                            <h2 class="text-lg font-semibold">Movie</h2>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-400">Release Date</p>
+                            <h2 class="text-lg font-semibold">2019-04-24</h2>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-400">Run Time</p>
+                            <h2 class="text-lg font-semibold">181 min</h2>
+                        </div>
+                        <div class="mt-4">
+                            <p class="text-gray-400">Genres</p>
+                            <p class="text-lg font-semibold">Adventure, Action</p>
+                        </div>
+                    </div>
+                    
+                    </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+</body>
+
+</html>
